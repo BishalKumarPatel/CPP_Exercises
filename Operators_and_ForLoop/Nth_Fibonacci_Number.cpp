@@ -50,6 +50,31 @@ Time Limit: 1 second
 
 #include<iostream>
 using namespace std;
+int fibonacci(int n){
+    if(n==0)
+    return 0;
+    if(n==1)
+    return 1;
+    int a=0, b=1, next;
+    for(int i= 2;  i<=n; i++){
+        next = a+b;
+        a = b;
+        b = next;
+    }
+    return b;
+}
+int main(){
+    int n;
+    cin>>n;
+    cout<<fibonacci(n);
+    return 0;
+}
+
+
+//Recursive method
+/*
+#include<iostream>
+using namespace std;
 int solve(int n){
     if(n==0 || n==1)
     return n;
@@ -62,3 +87,4 @@ int main(){
     return 0;
 
 }
+    */
